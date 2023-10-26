@@ -1,0 +1,51 @@
+function showQuestion(questionType) {
+    let questionBox = document.getElementById(questionType);
+
+    // Hide all question boxes
+    hideAllQuestions();
+
+    // Show the selected question box
+    questionBox.style.display = 'block';
+}
+
+function hideAllQuestions() {
+    let questionBoxes = document.querySelectorAll('.question-box');
+
+    questionBoxes.forEach(function(box) {
+        box.style.display = 'none';
+    });
+}
+
+function findTagColor() {
+    let birthYear = parseInt(document.getElementById('birthYear').value);
+    let colorText = document.getElementById('colorText');
+    
+    // Your color logic here (as previously described)
+    // You can customize this part to match the color cycle
+    // Example: "Blue" for 2015, "Black" for 2016, and so on
+
+    colorText.innerText = "Tag Color Logic Here";
+    document.getElementById('colorResult').style.display = 'block';
+}
+
+function checkTaggingRequirement() {
+    let taggingDate = new Date(document.getElementById('taggingDate').value);
+    let taggingText = document.getElementById('taggingText');
+    
+    // Your tagging requirement logic here
+    // Example: Check if tagging is required based on the date
+
+    taggingText.innerText = "Tagging Requirement Logic Here";
+    document.getElementById('taggingResult').style.display = 'block';
+}
+
+function checkScanningRequirement() {
+    let scanningDate = new Date(document.getElementById('scanningDate').value);
+    let scanningText = document.getElementById('scanningText');
+    
+    // Your scanning requirement logic here
+    // Example: Check if scanning is required based on the date
+
+    scanningText.innerText = "Scanning Requirement Logic Here";
+    document.getElementById('scanningResult').style.display = 'block';
+}

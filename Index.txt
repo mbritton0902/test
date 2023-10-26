@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eID Information</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="question-button" onclick="showQuestion('tagColors')">Tag Colors</button>
+        <button class="question-button" onclick="showQuestion('taggingDates')">Tagging Dates</button>
+        <button class="question-button" onclick="showQuestion('scanningDates')">Scanning Dates</button>
+
+        <div id="tagColors" class="question-box">
+            <p>Find my color tag by year of birth:</p>
+            <input type="number" id="birthYear" placeholder="Enter birth year">
+            <button onclick="findTagColor()">Get Tag Color</button>
+            <div id="colorResult" class="answer-box">
+                <p id="colorText"></p>
+            </div>
+        </div>
+
+        <div id="taggingDates" class="question-box">
+            <p>If your sheep/goats are born on the following date, do they require an eID tag?</p>
+            <input type="date" id="taggingDate">
+            <button onclick="checkTaggingRequirement()">Check Requirement</button>
+            <div id="taggingResult" class="answer-box">
+                <p id="taggingText"></p>
+            </div>
+        </div>
+
+        <div id="scanningDates" class="question-box">
+            <p>Do sheep and/or goats need to be eID scanned when arriving at a property or facility from this date?</p>
+            <input type="date" id="scanningDate">
+            <button onclick="checkScanningRequirement()">Check Requirement</button>
+            <div id="scanningResult" class="answer-box">
+                <p id="scanningText"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
